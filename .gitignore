@@ -1,0 +1,45 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Build / packaging
+build/
+dist/
+wheels/
+*.egg-info
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Environment variables
+.env
+.env.*
+
+# Python version (optional — see note below)
+# .python-version
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Testing / coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Jupyter (if you ever use it)
+.ipynb_checkpoints/
+
+# UV cache (optional but safe to ignore)
+.uv/

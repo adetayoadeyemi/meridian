@@ -1,0 +1,50 @@
+Problem
+Meridian Electronic's customer support team currently handles customer inquiries MANUALLY. 
+This approach is time-consuming and error-prone.
+They do this by Phone and Email, this tell us customer want human like experience.
+
+Solution
+We will build an AI Powered chatbot that can handle customer inquiries automatically. The chatbot will be able to handle customer inquiries 24/7 and will be able to handle a large number of customers.
+The chatbot must allow customers do the following:
+-checking product availability
+-helping customers place orders
+-looking up order history
+-authenticating returning customers
+
+What we already have:
+MCP Server from backend team, available here: 
+MCP_SERVER_URL=https://order-mcp-74afyau24q-uc.a.run.app/mcp
+Transport: Streamable HTTP
+
+Strategy:
+Build a working prototype first
+
+
+Tech Stack
+OpenAI Agent SDK for building the chatbot
+Model: gpt-4o-mini (a good balance of cost and performance)
+Gradio for UI
+deployment on Hugging Face Spaces
+
+Immediate Next Steps:
+1. setup minimal ui with gradio that allows users to chat with the chatbot
+2. setup the MCP client to talk to the MCP server
+3. setup the chatbot to use the MCP client
+4. test the chatbot
+5. deploy the chatbot to Hugging Face Spaces
+
+
+Possible Challenges:
+1. MCP server is not always available,reliable, be defensive about it
+2. Tool looping and memory management in chatbot is tricky, be careful about it
+3. Test deployment on Hugging Face Spaces as early as possible to see if libraries will be supported
+
+
+list_products()
+get_product()
+search_products()
+get_customer()
+verify_customer_pin()
+list_orders()
+get_order()
+create_order()
