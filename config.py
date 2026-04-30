@@ -3,5 +3,12 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-MCP_SERVER_URL = os.getenv("MCP_SERVER_URL")
+def get_env(name: str) -> str:
+    value = os.getenv(name)
+    if not value:
+        raise ValueError(f"{name} is not set")
+    return value
+
+
+OPENAI_API_KEY = get_env("OPENAI_API_KEY")
+MCP_SERVER_URL = get_env("MCP_SERVER_URL")
